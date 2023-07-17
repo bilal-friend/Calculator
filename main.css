@@ -125,7 +125,8 @@
     font-size: 22px;
   }
   .commands {
-    grid-template-rows: minmax(40px, auto);
+    grid-auto-rows: 60px;
+    gap: 15px;
   }
 }
 body {
