@@ -1,0 +1,127 @@
+.Calculator {
+  border: 1px rgb(180, 180, 180) solid;
+  padding: 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+.dark .Calculator {
+  box-shadow: white -3px -4px 20px;
+}
+
+.result {
+  border: inherit;
+  min-height: 80px;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 30px;
+  box-shadow: #eeeeee 1px 2px 12px inset;
+  color: dodgerblue;
+  font-weight: bold;
+  font-family: monospace;
+}
+.dark .result {
+  box-shadow: #000000 -1px 0px 20px 20px inset;
+  color: #73baff;
+}
+.commands {
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: minmax(80px, auto);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  padding: 20px 0;
+}
+.commands div {
+  color: gray;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #d5d2d2 1px 2px 12px, gray -3px -3px 2px 0px inset;
+  border-radius: 10px;
+  font-family: sans-serif;
+  animation-duration: 0.3s;
+}
+.dark .commands div {
+  color: white;
+  box-shadow: #ffffff 0px 1px 3px 0px, black -3px -4px 6px 0px inset;
+}
+@keyframes clicking {
+  0% {
+    box-shadow: #d5d2d2 1px 2px 12px, gray -3px -3px 2px 0px inset;
+  }
+  50% {
+    box-shadow: #d5d2d2 1px 2px 12px;
+  }
+
+  100% {
+    box-shadow: #d5d2d2 1px 2px 12px, gray -3px -3px 2px 0px inset;
+  }
+}
+
+.commands .clear {
+  background-color: red;
+  color: white;
+}
+.commands .plus {
+  grid-row: span 2;
+  background-color: green;
+  color: white;
+}
+.commands .equal {
+  background-color: dodgerblue;
+  color: white;
+}
+.controlMode {
+  background-color: black;
+  width: 130px;
+  height: 30px;
+  border-radius: 50px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 5px;
+}
+.controlMode span {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+}
+
+.dark {
+  background: #121212;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .controlMode {
+    height: 20px;
+  }
+  .controlMode span {
+    width: 20px;
+    height: 20px;
+  }
+  .Calculator {
+    width: 75vw;
+    min-width: 270px;
+  }
+  .result {
+    font-size: 25px;
+  }
+  .commands div {
+    font-size: 22px;
+  }
+  .commands {
+    grid-template-rows: minmax(50px, auto);
+  }
+}
+body {
+  padding: 0 10px;
+}
