@@ -99,6 +99,12 @@
   background: #121212;
   color: white;
 }
+.dark .controlMode {
+  background-color: white;
+}
+.dark .controlMode span {
+  background: black;
+}
 
 @media only screen and (max-width: 500px) {
   .controlMode {
@@ -109,8 +115,8 @@
     height: 20px;
   }
   .Calculator {
-    width: 75vw;
-    min-width: 270px;
+    width: 80vw;
+    min-width: 300px;
   }
   .result {
     font-size: 25px;
@@ -119,7 +125,7 @@
     font-size: 22px;
   }
   .commands {
-    grid-template-rows: minmax(50px, auto);
+    grid-template-rows: minmax(40px, auto);
   }
 }
 body {
